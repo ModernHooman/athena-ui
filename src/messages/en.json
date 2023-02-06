@@ -1,0 +1,25 @@
+{
+  "shared": {
+    "conf": {
+      "app-name": "Athena UI"
+    },
+    "labels": {
+      "login": "Login",
+      "register": "Register",
+      "switch-locale": "{locale, select, fa {Farsi} en {English} de {Deutsch} other {Unknown}}"
+    }
+  },
+  "general": {
+    "labels": {
+      "components": "Components"
+    },
+    "validation-messages": {
+    }
+  },
+  "admin": {
+    "labels": {
+    },
+    "validation-messages": {
+    }
+  }
+}
