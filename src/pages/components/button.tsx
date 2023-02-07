@@ -1,28 +1,22 @@
 import {MainLayout} from '@/components/general/layouts/main-layout';
+import {Breadcrumb, BreadcrumbChild} from '@/components/shared/breadcrumb';
 import {StaticProps} from '@/types/static-props';
 import {pick} from 'lodash';
 import {useTranslations} from 'use-intl';
 
 const _intlNamespaces = ['shared', 'general'];
 
-const Login = () => {
+const Button = () => {
   const sharedT = useTranslations('shared');
   const t = useTranslations('general');
 
   return (
     <MainLayout t={sharedT}>
-      <Breadcrumb items={[
-        {
-          text: t('app-name'),
-          as  : 'link',
-          href: '/',
-        },
-        {
-          text: t('components'),
-          as  : 'link',
-          href: '/',
-        },
-      ]}/>
+      <Breadcrumb className='mt-4'>
+        <BreadcrumbChild href='/'>{sharedT('conf.app-name')}</BreadcrumbChild>
+        <BreadcrumbChild href='/components'>{t('labels.components')}</BreadcrumbChild>
+        <BreadcrumbChild>{t('labels.button')}</BreadcrumbChild>
+      </Breadcrumb>
     </MainLayout>
   );
 };
@@ -37,4 +31,4 @@ export const getStaticProps = async ({locale}: StaticProps) => {
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Login;
+export default Button;
