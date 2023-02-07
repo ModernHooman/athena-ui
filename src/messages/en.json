@@ -11,7 +11,8 @@
   },
   "general": {
     "labels": {
-      "components": "Components"
+      "components": "Components",
+      "button": "Button"
     },
     "validation-messages": {
     }
